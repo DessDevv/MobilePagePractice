@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white">
+                <h1>Edit Mobile Page</h1>
+<form action="/update-mobile/{{mobile._id}}" method="POST">
+<div>
+    <label for="key">Update key mobile:</label>
+    <input type="text" name="key" placeholder="Key"
+    value="{{mobile.key}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="brand">Update brand:</label>
+    <input type="text" name="brand" placeholder="Brand"
+    value="{{mobile.brand}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="price">Update price:</label>
+    <input type="text" name="price" placeholder="Price"
+    value="{{mobile.price}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="releaseDate">Update release date:</label>
+    <input type="text" name="releaseDate" placeholder="ReleaseDate"
+    value="{{mobile.releaseDate}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="ram">Update RAM:</label>
+    <input type="text" name="ram" placeholder="Ram"
+    value="{{mobile.ram}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="storage">Update storage:</label>
+    <input type="text" name="storage" placeholder="Storage"
+    value="{{mobile.storage}}" class="form-control bg-dark text-white">
+</div>
+<div>
+    <label for="numbCameras">Update number of cameras:</label>
+    <input type="text" name="numbCameras" placeholder="NumbCameras"
+    value="{{mobile.numbCameras}}" class="form-control bg-dark text-white">
+</div>
+<button class="btn btn-info">Update</button>
+</form>
+            </div>
+        </div>
+    </div>
+</div>

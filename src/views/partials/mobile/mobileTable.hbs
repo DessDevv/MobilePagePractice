@@ -1,0 +1,46 @@
+{{#if mobile}}
+<table class="table table-bordered table-hover table-dark">
+    <thead>
+        <tr class="text-center">
+            <th>Num.</th>
+            <th>Key</th>
+            <th>Brand</th>
+            <th>Price</th>
+            <th>ReleaseDate</th>
+            <th>Ram</th>
+            <th>Storage</th>
+            <th>NumbCameras</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each mobile}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{key}}</td>
+            <td>{{brand}}</td>
+            <td>{{price}}</td>
+            <td>{{releaseDate}}</td>
+            <td>{{ram}}</td>
+            <td>{{storage}}</td>
+            <td>{{numbCameras}}</td>
+            <td>
+                {{#if option}}
+                <a href="/status-mobile/{{_id}}" class="btn btn-warning">Unavailable</a>
+                {{else}}
+                <a href="/status-mobile/{{_id}}" class="btn btn-success">Available</a>
+                {{/if}}
+                <a href="/update-mobile/{{_id}}" class="btn btn-info">Update</a>
+                <a href="/delete-mobile/{{_id}}" class="btn btn-danger">Delete</a>
+                
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="text-center text-white">
+    <h1>There aren't mobiles</h1>
+    <img src="https://freepngimg.com/thumb/folder/36792-3-folders-file.png" class="w-75"/>
+</div>
+{{/if}}
